@@ -1,0 +1,100 @@
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  color: white;
+  background-color: black;
+  overflow: hidden;
+}
+
+.background-image {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: url('GRX_Clan_WebHero.png') center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -10;
+  opacity: 0.95;
+}
+
+.container {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  top: 30vh;
+}
+
+h1 {
+  font-size: 3rem;
+  text-shadow: 0 0 10px red;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.apply-button {
+  padding: 15px 30px;
+  font-size: 1rem;
+  background-color: #ff1f44;
+  color: white;
+  border: none;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.apply-button:hover {
+  background-color: #ff3b5c;
+}
+
+.form-container {
+  width: 90%;
+  max-width: 500px;
+  margin: 100px auto;
+  background-color: rgba(20, 20, 20, 0.85);
+  padding: 30px;
+  border-radius: 10px;
+  z-index: 10;
+  position: relative;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #111;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+form button {
+  margin-top: 20px;
+  padding: 12px;
+  width: 100%;
+  background-color: #ff1f44;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.fog-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('https://i.ibb.co/WxPMfQw/fog1.png') repeat;
+  opacity: 0.1;
+  animation: fogmove 120s linear infinite;
+  z-index: -5;
+  pointer-events: none;
+}
+
+@keyframes fogmove {
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 1000px; }
+}
