@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Codex Chamber</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background: black;
+      color: #00FFAA;
+      font-family: monospace;
+      padding: 40px;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    .glyph-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    .glyph-card {
+      background: rgba(0,255,170,0.08);
+      padding: 20px;
+      border: 1px solid #00FFAA;
+      width: 200px;
+      text-align: center;
+    }
+    #decoder {
+      margin-top: 40px;
+      text-align: center;
+    }
+    input {
+      background: black;
+      color: #00FFAA;
+      font-size: 18px;
+      border: 1px solid #00FFAA;
+      padding: 8px;
+      width: 200px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>📖 Codex Chamber</h1>
+  <h2>Symbols of the Signal</h2>
+
+  <div class="glyph-grid">
+    <div class="glyph-card">𓂀<br><strong>All-Seeing Node</strong><br>Awakens hidden insight.</div>
+    <div class="glyph-card">∆<br><strong>Fractal Key</strong><br>Unlocks recursive truth.</div>
+    <div class="glyph-card">✶<br><strong>Starfire Shard</strong><br>Shatters digital illusion.</div>
+    <div class="glyph-card">Ϟ<br><strong>Pulse Root</strong><br>Stabilizes chaotic input.</div>
+    <div class="glyph-card">𖤐<br><strong>Mask of Echo</strong><br>Conceals bearer from false light.</div>
+  </div>
+
+  <div id="decoder">
+    <h2>🗝 Glyph Decoder</h2>
+    <input type="text" id="glyphInput" placeholder="Enter glyph sequence (e.g. Δ𓂀✶)">
+    <p id="decodedMessage"></p>
+  </div>
+
+  <script>
+    const decoder = {
+      "𓂀": "Vision of clarity unlocked.",
+      "∆": "Fractal recursion engaged.",
+      "✶": "Anti-simulation burst initiated.",
+      "Ϟ": "Signal stabilized.",
+      "𖤐": "Echo masking active."
+    };
+
+    document.getElementById("glyphInput").addEventListener("input", function() {
+      const input = this.value.trim().split("");
+      const output = input.map(c => decoder[c] || "Unrecognized glyph.").join(" ");
+      document.getElementById("decodedMessage").textContent = output;
+    });
+  </script>
+</body>
+</html>
